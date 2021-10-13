@@ -1,6 +1,6 @@
 # Squid Docker Image 
 
-This **Squid Docker Image** is based on Alpine Linux.
+This *Squid Docker Image* is based on **Alpine Linux**.
 
 ## Supported tags and respective `Dockerfile` links
 
