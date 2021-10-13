@@ -14,6 +14,7 @@ RUN apk update --no-cache && \
     ./configure \
       --prefix=/opt/squid \
       --disable-strict-error-checking \
+      --disable-arch-native \
       --enable-poll \
       --enable-delay-pools \
       --enable-linux-netfilter \
