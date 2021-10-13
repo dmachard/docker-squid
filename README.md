@@ -21,7 +21,8 @@ docker run --name squid01 -d -p 3128:3128/tcp --restart=always dmachard/squid:la
 You can run this image and provide your own squid configuration like that:
 
 ```
-docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/mysquid.conf:/opt/squid/etc/squid.conf dmachard/squid:latest
+docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/mysquid.conf:/opt/squid/etc/squid.conf \
+dmachard/squid:latest
 ```
 
 ## Volume for access Logs
@@ -29,5 +30,6 @@ docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/mysquid.conf:/opt/squid/et
 Example to get access logs in your host
 
 ```
-docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/cache/:/opt/squid/var/logs/ dmachard/squid:latest
+docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/cache/:/opt/squid/var/logs/ \
+dmachard/squid:latest
 ```
