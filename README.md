@@ -14,7 +14,7 @@ This **Squid Docker Image** is based on Alpine Linux.
 Run this container with the following command:
 
 ```
-docker run --name squid01 -d -p 3128:3128/tcp --restart=always dmachard/squid:latest
+sudo docker run --name squid01 -d -p 3128:3128/tcp --restart=always dmachard/squid:latest
 ```
 
 Testing squid container
@@ -36,7 +36,7 @@ Saving to: ‘index.html
 You can run this image and provide your own squid configuration like that:
 
 ```
-docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/mysquid.conf:/opt/squid/etc/squid.conf \
+sudo docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/mysquid.conf:/opt/squid/etc/squid.conf \
 dmachard/squid:latest
 ```
 
@@ -45,6 +45,6 @@ dmachard/squid:latest
 Example to get access logs in your host
 
 ```
-docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/cache/:/opt/squid/var/logs/ \
+sudo docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/cache/:/opt/squid/var/logs/ \
 dmachard/squid:latest
 ```
