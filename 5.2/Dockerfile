@@ -15,13 +15,10 @@ RUN apk update --no-cache && \
       --prefix=/opt/squid \
       --disable-strict-error-checking \
       --disable-arch-native \
-      --enable-poll \
       --enable-delay-pools \
       --enable-linux-netfilter \
-      --enable-auth \
-      --with-openssl \
-      --enable-ssl-crtd \ 
-      --with-large-files && \
+      --enable-auth=basic,digest \
+      --with-openssl && \
     make && \
     make install
 

@@ -1,6 +1,10 @@
 # Squid Docker Image 
 
 This *Squid Docker Image* is based on **Alpine Linux**.
+Squid is compilated with the following features:
+- Traffic shaping or bandwidth limiting (--enable-delay-pools)
+- HTTP interception (--enable-linux-netfilter)
+- Basic and digest HTTP authentication schemes supported (--enable-auth)
 
 ## Supported tags and respective `Dockerfile` links
 
