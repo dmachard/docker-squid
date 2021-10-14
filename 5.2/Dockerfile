@@ -17,7 +17,7 @@ RUN apk update --no-cache && \
       --disable-arch-native \
       --enable-delay-pools \
       --enable-linux-netfilter \
-      --enable-auth=basic,digest \
+      --enable-auth=digest \
       --with-openssl && \
     make && \
     make install
