@@ -1,6 +1,4 @@
-ARG ALPINE_VERSION=3.14.2
-
-FROM alpine:${ALPINE_VERSION} as build
+FROM alpine:3.14.2 as build
 
 ENV NAME=squid \
     VERSION=5.2\
@@ -22,7 +20,7 @@ RUN apk update --no-cache && \
     make && \
     make install
 
-FROM alpine:${ALPINE_VERSION}
+FROM alpine:3.14.2
 
 COPY --from=build /opt/squid /opt/squid
 WORKDIR /opt/squid/
