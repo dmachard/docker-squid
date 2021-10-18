@@ -43,12 +43,3 @@ You can run this image and provide your own squid configuration like that:
 sudo docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/mysquid.conf:/opt/squid/etc/squid.conf \
 dmachard/squid:latest
 ```
-
-## Volume for access Logs
-
-Example to get access logs in your host
-
-```
-sudo docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/cache/:/opt/squid/var/logs/ \
-dmachard/squid:latest
-```
