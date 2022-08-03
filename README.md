@@ -8,7 +8,8 @@ Squid is compilated with the following features:
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`5.5-r0`, `latest`](https://github.com/dmachard/squid-docker/tree/main/5.5)
+- [`5.6-r0`, `latest`](https://github.com/dmachard/squid-docker/tree/main/5.6)
+- [`5.5-r0`](https://github.com/dmachard/squid-docker/tree/main/5.5)
 - [`5.4-r0`](https://github.com/dmachard/squid-docker/tree/main/5.4)
 - [`5.3-r0`](https://github.com/dmachard/squid-docker/tree/main/5.3)
 - [`5.2-r2`](https://github.com/dmachard/squid-docker/tree/main/5.2)
