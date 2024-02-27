@@ -2,33 +2,28 @@
 
 This *[Squid](http://www.squid-cache.org/) Docker Image* is based on **Alpine Linux**.
 Squid is compilated with the following features:
+
 - Traffic shaping or bandwidth limiting (--enable-delay-pools)
 - HTTP interception (--enable-linux-netfilter)
 - Basic and digest HTTP authentication schemes supported (--enable-auth)
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`5.7-r0`, `latest`](https://github.com/dmachard/squid-docker/tree/main/5.7)
-- [`5.6-r0`](https://github.com/dmachard/squid-docker/tree/main/5.6)
-- [`5.5-r0`](https://github.com/dmachard/squid-docker/tree/main/5.5)
-- [`5.4-r0`](https://github.com/dmachard/squid-docker/tree/main/5.4)
-- [`5.3-r0`](https://github.com/dmachard/squid-docker/tree/main/5.3)
-- [`5.2-r2`](https://github.com/dmachard/squid-docker/tree/main/5.2)
-- [`5.1-r0`](https://github.com/dmachard/squid-docker/tree/main/5.1)
-- [`5.0.7-r0`](https://github.com/dmachard/squid-docker/tree/main/5.0.7)
+- [`6.7-r0`, `latest`](https://github.com/dmachard/squid-docker/tree/main/6.7)
+- [`5.7-r0`](https://github.com/dmachard/squid-docker/tree/main/5.7)
 - [`4.17-r0`](https://github.com/dmachard/squid-docker/tree/main/4.17)
 
 ## How to use this image
 
 Run this container with the following command:
 
-```
+```bash
 sudo docker run --name squid01 -d -p 3128:3128/tcp --restart=always dmachard/squid:latest
 ```
 
 Testing squid container
 
-```
+```bash
 $ export http_proxy=127.0.0.1:3128
 $ export https_proxy=127.0.0.1:3128
 
@@ -44,7 +39,7 @@ Saving to: ‘index.html
 
 You can run this image and provide your own squid configuration like that:
 
-```
+```bash
 sudo docker run --name squid01 -d -p 3128:3128/tcp -v $PWD/mysquid.conf:/opt/squid/etc/squid.conf \
 dmachard/squid:latest
 ```
