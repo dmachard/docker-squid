@@ -1,8 +1,8 @@
-FROM alpine:3.16.0 as build
+FROM alpine:3.19.1 as build
 
 ENV NAME=squid \
-    VERSION=5.6\
-    DOWNLOAD_URL=http://www.squid-cache.org/Versions/v5/squid-5.6.tar.gz
+    VERSION=6.7\
+    DOWNLOAD_URL=http://www.squid-cache.org/Versions/v6/squid-6.7.tar.gz
 
 RUN apk update --no-cache && \
     apk add curl build-base openssl-dev perl-dev autoconf automake heimdal-dev libtool libcap-dev linux-headers && \
@@ -20,7 +20,7 @@ RUN apk update --no-cache && \
     make && \
     make install
 
-FROM alpine:3.16.0
+FROM alpine:3.19.1
 
 COPY --from=build /opt/squid /opt/squid
 WORKDIR /opt/squid/
