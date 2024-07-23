@@ -1,6 +1,6 @@
 version: 2
 updates:
   - package-ecosystem: "docker"
-    directory: "/5.7/"
+    directory: "/6.7/"
     schedule:
       interval: "weekly"
